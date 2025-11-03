@@ -1,0 +1,256 @@
+/* Prevent adjustments of font size after orientation changes. */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  height: 100%;
+  /*moz and webkit are two different kinds of browsers. This is for older devices specifically.*/
+}
+
+/*----------- Apply a natural box layout model to all elements -----------*/
+* {
+  -moz-box-sizing: border-box;
+  /*border-box: padding is inside, margin is outside.*/
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  font-family: $defaultFont;
+  font-weight: $medWeight;
+  color: $fontColor;
+  background-color: black;
+}
+
+/*------------ Header Section ------------*/
+#headerWrapper {
+  background-color: black;
+  color: white;
+  font-size: 1.5rem;
+}
+
+header {
+  grid-template-columns: 1fr 44px;
+  display: grid;
+  align-items: center;
+  padding: 0.5rem $gutter;
+  gap: 8px;
+  border-bottom: 1px solid white;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 1.4rem;
+  }
+}
+
+/*------------ Navigation Section ------------*/
+#navWrapper {
+  background-color: $sColor;
+}
+
+#theNav {
+  background-color: $pColor;
+  height: 0;
+  overflow: hidden;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  li a {
+    display: block;
+    padding: 0.75rem 2vw;
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+    border-top: 1px solid $sColor;
+  }
+
+  li.active a {
+    background-color: $tColor;
+    color: rgb(2, 43, 32);
+  }
+
+  li a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  &.open {
+    height: auto;
+  }
+}
+
+//The Button starts here
+#theButton {
+  border: none;
+  background: none;
+  font-size: 2rem;
+  color: white;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+
+  &::before {
+    content: "\2630";
+  }
+}
+#theButton.open::before {
+  content: "\2715";
+  font-size: 1.6rem;
+}
+
+//The Submenu Items start here
+.parent > a::after {
+  content: "\25BC";
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+  float: right;
+}
+
+.parent ul {
+  list-style-type: none;
+  padding: 0;
+  background-color: purple;
+  display: none;
+}
+.parent:hover ul {
+  display: block;
+}
+
+/*------------ Main Section ------------*/
+#mainWrapper {
+  padding: 0 $gutter;
+  h1 {
+    text-align: center;
+    color: white;
+  }
+}
+
+.swiper,
+.swiper img {
+  width: 100%;
+  height: auto;
+}
+
+div.chaliceParent {
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  p {
+    text-align: center;
+  }
+  section {
+    padding: 10px;
+    img {
+      width: 100%;
+      height: auto;
+      transition: transform 0.8s ease;
+      clip-path: polygon(
+        30% 0%,
+        70% 0%,
+        100% 30%,
+        100% 70%,
+        70% 100%,
+        30% 100%,
+        0% 70%,
+        0% 30%
+      );
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  } //End of child.
+} //End of chaliceParent.
+
+h2,
+h3 {
+  text-align: center;
+  color: white;
+} //Outside of both divs, might change later.
+
+div.testimonyParent {
+  display: grid;
+  grid-template-rows: 1fr;
+  border-bottom: white 1px solid;
+  padding-bottom: 1rem;
+  section {
+    padding: 5px;
+    p {
+      text-align: center;
+      font-size: 1rem;
+      margin-top: 0.5rem;
+      color: white;
+    }
+    img {
+      display: block;
+      margin: 0 auto;
+      width: 50%;
+      height: auto;
+      clip-path: circle(50% at 50% 50%);
+      transition: transform 1s;
+      &:hover {
+        animation: rotate 2s 3;
+        @keyframes rotate {
+          0% {
+            transform: rotate(0deg);
+          }
+          25% {
+            transform: rotate(15deg);
+          }
+          50% {
+            transform: rotate(0deg);
+          }
+          75% {
+            transform: rotate(-15deg);
+          }
+          100% {
+            transform: rotate(0deg);
+          }
+        }
+      }
+    }
+  } //End of child.
+} //End of testimonyParent.
+
+div.imgMask {
+  display: grid;
+  section {
+    position: relative;
+    padding-bottom: 1rem;
+    h2 {
+      text-align: center;
+      font-size: 1.5rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      color: white;
+    }
+    img {
+      display:block;
+      width: 100%;
+      height: auto;
+    }
+    img:last-child {
+      position: absolute;
+      bottom: 0;
+    }
+  }
+}
+
+/*------------ Footer Section ------------*/
+
+#footerWrapper {
+  background-color: #1d4944;
+}
+footer {
+  padding: 0.5rem $gutter;
+  width: 100%;
+  p {
+    margin: 0;
+    font-weight: $medWeight;
+    text-align: center;
+    color: $bgColor;
+  }
+}

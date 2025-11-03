@@ -1,0 +1,99 @@
+header {
+  padding: 2rem $gutter;
+  h1 {
+    font-size: 2rem;
+  }
+}
+/*------------ Navigation Section ------------*/
+#theButton {
+  display: none;
+}
+#theNav {
+  background-color: $pColor;
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  height: auto;
+  overflow: visible;
+  li {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  li a {
+    padding: 0.9rem 1.2rem;
+    display: block;
+    color: white;
+    text-decoration: none;
+  }
+  li a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  li.active a {
+    background-color: $tColor;
+    color: rgb(2, 43, 32);
+  }
+
+  //Rules for submenu items
+  li {
+    position: relative;
+  }
+  li ul {
+    background-color: $pColor;
+    color: white;
+    list-style-type: none;
+    padding: 0;
+    position: absolute;
+    left: -999rem; //Pushes items offscreen and out of view.
+    top: 100%;
+    min-width: 200px;
+    z-index: 1000;
+  }
+  li ul li {
+    width: 100%;
+    margin: 0;
+    padding: .5rem .5rem;
+  }
+  //This displays the menu as dropdowns
+  li:hover ul {
+    left: 0;
+  }
+}
+/*------------ Main Section------------*/
+div.testimonyParent {
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 30px;
+    section {
+        display: grid;
+        grid-template-columns: 150px 1fr;
+        grid-template-rows: auto auto;
+        column-gap: 20px;
+        align-items: start;
+        padding: 10px;
+        
+        img {
+            grid-column: 1;
+            grid-row: 1 / 3;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+        h3 {
+            grid-column: 2;
+            grid-row: 1;
+            margin: 0 0 10px 0;
+            text-align: left;
+        }
+        p {
+            grid-column: 2;
+            grid-row: 2;
+            margin: 0;
+            text-align: left;
+        }
+     }//End of child.
+}//End of testimonyParent.
+#testimonyH {
+  border-top: white 1px solid;
+}
+

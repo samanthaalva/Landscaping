@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home | Alvacode</title>
+    <meta name="description" content="DWDD2610 Module 1: Build a Start File" />
+    <meta name="author" content="Samantha Alva" />
+
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--STYLE SHEETS-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/styles.min.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+
+    <!-- fav icon stuff -->
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+  </head>
+  <body>
+    <div id="headerWrapper">
+      <header>
+        <img
+          src="images/small.png"
+          alt="logo"
+          width="427"
+          height="119"
+          srcset="images/small.png 1x, images/med.png 2x, images/large.png 3x"
+        />
+        <!--<span>The Gods Table</span>-->
+        <button id="theButton"></button>
+      </header>
+    </div>
+
+    <div id="navWrapper">
+      <nav>
+        <ul id="theNav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">Campaigns</a></li>
+          <li class="parent">
+            <a href="#">Commissions</a>
+            <ul>
+              <li><a href="#"></a>Art</li>
+              <li><a href="#"></a>Sound Design</li>
+              <li><a href="#"></a>World Building</li>
+            </ul>
+          </li>
+          <li class="parent">
+            <a href="#">Our Adventurers</a>
+            <ul>
+              <li><a href="#"></a>Fleur Ammamion</li>
+              <li><a href="#"></a>Acacios FairBristle</li>
+              <li><a href="#"></a>Acecos Ashenburrow</li>
+            </ul>
+          </li>
+          <li><a href="#">The Chalice of Knowledge</a></li>
+        </ul>
+        <!-- ul>li*3>a is the shorthand code we used, with Emmet, to generate the unordered list above. -->
+      </nav>
+    </div>
+
+    <!--MAIN STUFF HERE-->
+    <div id="mainWrapper">
+      <main>
+        <h1>Welcome to The Gods Table</h1>
+        <h2>Have a seat, grab a flask, and enjoy.</h2>
+
+        <!-- Slider main container -->
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <img src="images/sliderA_small.webp" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/sliderB_small.webp" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/sliderC_small.webp" />
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+        <!-- End of slider container -->
+        <h2>The Chalice of Knowledge</h2>
+
+        <div class="chaliceParent">
+          <section>
+            <img
+              src="images/character_edit.webp"
+              width="500"
+              height="500"
+              alt="charactersheet"
+            />
+            <p>Character Creation</p>
+          </section>
+          <section>
+            <img
+              src="images/world_edit.webp"
+              width="500"
+              height="500"
+              alt="worldbuilding"
+            />
+            <p>World Building</p>
+          </section>
+          <section>
+            <img
+              src="images/gameplay_edit.webp"
+              width="500"
+              height="500"
+              alt="gameplay"
+            />
+            <p>Gameplay</p>
+          </section>
+          <section>
+            <img src="images/dm_edit.webp" width="500" height="500" alt="dm" />
+            <p>Dungeon Master Training</p>
+          </section>
+        </div>
+        <h2 class="testimonyH">Our Testimonies</h2>
+        <div class="testimonyParent">
+          <section id="matt">
+            <h3>Matt Mercer</h3>
+            <img
+              src="images/matt_edit.webp"
+              width="500"
+              height="500"
+              alt="matt"
+            />
+            <p>
+              "Time and time again, the players constantly surprise you and
+              often not do at all what you expect and completely muck up your
+              preparation, and that's kind of the beauty of the game. It
+              wouldn't be as fun to the DM if everything worked out exactly how
+              you thought it would."
+            </p>
+          </section>
+          <section id="brennan">
+            <h3>Brennan Lee Mulligan</h3>
+            <img
+              src="images/brennan_edit.webp"
+              width="500"
+              height="500"
+              alt="brennan"
+            />
+            <p>
+              "And I’m not sorry! I like to snack! And to answer your question,
+              almonds."
+            </p>
+          </section>
+        </div>
+        <div class="imgMask">
+          <section>
+            <h2>Have fun on your Adventures!</h2>
+            <img
+              src="images/trees_edit2.webp"
+              width="320"
+              height="214"
+              alt="trees"
+            />
+            <img
+              src="images/book_edit.png"
+              width="320"
+              height="214"
+              alt="book-mask"
+            />
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <div>
+      <footer id="footerWrapper">
+        <p>&copy; <span id="year">x</span> &bull; Samantha Alva</p>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
