@@ -222,14 +222,15 @@ div.imgMask {
     padding-top: 5rem;
     padding-bottom: 1rem;
     h2 {
-      text-align: center;
+          text-align: center;
       font-size: 1.5rem;
+      padding: 1 0;
       color: white;
-      position: absolute;
-      top: 1rem;
-      left: 0;
-      right: 0;
-      z-index: 100;
+    }
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
     }
     img {
       display:block;
