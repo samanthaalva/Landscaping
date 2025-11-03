@@ -219,14 +219,17 @@ div.imgMask {
   display: grid;
   section {
     position: relative;
+    padding-top: 5rem;
     padding-bottom: 1rem;
     h2 {
       text-align: center;
       font-size: 1.5rem;
-      padding: 1rem 0;
       color: white;
-      position: relative;
-      z-index: 10;
+      position: absolute;
+      top: 1rem;
+      left: 0;
+      right: 0;
+      z-index: 100;
     }
     img {
       display:block;
